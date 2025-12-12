@@ -7,6 +7,7 @@ Parses Label Studio JSON consensus annotations and creates train/val/test splits
 
 import json
 import os
+import re
 from pathlib import Path
 from sklearn.model_selection import train_test_split
 import pandas as pd
@@ -100,6 +101,12 @@ def resolve_image_path(file_upload: str, image_map: dict[str, Path]) -> Path | N
     """
     Resolve the actual image path from file_upload field.
     file_upload format: "uuid-filename.jpg"
+
+    Label Studio adds folder identifiers to filenames in various patterns:
+    - sajat_reszvevo01_01_D6AE9F.jpg (suffix)
+    - D6AE9F_sajat_reszvevo01_01.jpg (prefix)
+
+    Actual file on disk: sajat_reszvevo01_01.jpg (in D6AE9F/ folder)
     """
     if not file_upload:
         return None
@@ -108,13 +115,31 @@ def resolve_image_path(file_upload: str, image_map: dict[str, Path]) -> Path | N
     if file_upload.lower() in image_map:
         return image_map[file_upload.lower()]
 
-    # Try without uuid prefix
+    # Try without uuid prefix (format: uuid-filename.jpg)
+    filename = file_upload
     if "-" in file_upload:
         parts = file_upload.split("-", 1)
         if len(parts) == 2:
-            filename = parts[1].lower()
-            if filename in image_map:
-                return image_map[filename]
+            filename = parts[1]
+            if filename.lower() in image_map:
+                return image_map[filename.lower()]
+
+    # Try stripping folder suffix (e.g., sajat_reszvevo01_01_D6AE9F.jpg -> sajat_reszvevo01_01.jpg)
+    # Pattern: name_FOLDERID.ext where FOLDERID is 6 uppercase alphanumeric chars
+    base, ext = os.path.splitext(filename)
+    # Remove folder suffix like _D6AE9F, _ECSGGY, etc.
+    stripped = re.sub(r'_[A-Z0-9]{6}$', '', base)
+    if stripped != base:
+        candidate = (stripped + ext).lower()
+        if candidate in image_map:
+            return image_map[candidate]
+
+    # Try stripping folder prefix (e.g., D6AE9F_sajat_reszvevo01_01.jpg -> sajat_reszvevo01_01.jpg)
+    stripped = re.sub(r'^[A-Z0-9]{6}_', '', base)
+    if stripped != base:
+        candidate = (stripped + ext).lower()
+        if candidate in image_map:
+            return image_map[candidate]
 
     return None
 
