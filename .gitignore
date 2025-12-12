@@ -1,0 +1,55 @@
+# Virtual environment
+.venv/
+venv/
+env/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Data and output (mounted at runtime)
+data/
+output/
+
+# OpenSpec and Claude (local development tools)
+openspec/
+.claude/
+CLAUDE.md
+AGENTS.md
+
+# Project files not needed for submission
+constitutions.md
+project_goal.txt
+requirements.md
+sample.ipynb
+
+# Models directory in root (models are in output/)
+models/
+
+# OS files
+.DS_Store
+Thumbs.db

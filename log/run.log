@@ -1,0 +1,608 @@
+WARNING: The requested image's platform (linux/amd64) does not match the detected host platform (linux/arm64/v8) and no specific platform was requested
+==========================================
+AnkleAlign Pipeline
+==========================================
+
+Step 1: Running data processing...
+============================================================
+AnkleAlign Data Processing
+============================================================
+============================================================
+CONFIGURATION
+============================================================
+
+[Paths]
+  Data directory: /data
+  Output directory: /app/output
+  Models directory: /app/output/models
+  Consensus directory: /data/anklealign/anklealign/consensus
+
+[Training Hyperparameters]
+  Number of epochs: 50
+  Batch size: 32
+  Learning rate: 0.0001
+  Early stopping patience: 10
+  Number of workers: 0
+  Image size: 224x224
+
+[Model Configuration]
+  Model: resnet18
+  Pretrained: True
+  Number of classes: 3
+
+[Data Split Ratios]
+  Train: 70%
+  Validation: 15%
+  Test: 15%
+  Random state: 42
+
+[Classes]
+  0: 1_Pronacio -> Pronacio
+  1: 2_Neutralis -> Neutralis
+  2: 3_Szupinacio -> Szupinacio
+============================================================
+Scanning for images in /data...
+Found 331 image files
+Found 21 consensus JSON files
+Warning: Could not parse /data/anklealign/anklealign/consensus/DPMC6W.json
+Warning: Could not find image for aab415d1-sajat_reszvevo01_01_D6AE9F.jpg
+Warning: Could not find image for f6681adf-sajat_reszvevo01_02_D6AE9F.jpg
+Warning: Could not find image for 956bc9ac-sajat_reszvevo01_03_D6AE9F.jpg
+Warning: Could not find image for 11d90819-sajat_reszvevo02_01_D6AE9F.jpg
+Warning: Could not find image for be76db85-193684925-back-view-of-a-woman-s-bare-feet-and-high-heels-on-a-white-s_2wddlwB.jpg
+Warning: Could not find image for 4b70fe42-D6AE9F_sajat_reszvevo01_01.jpg
+Warning: Could not find image for 84d5f317-D6AE9F_sajat_reszvevo01_02.jpg
+Warning: Could not find image for 1aaa8300-D6AE9F_sajat_reszvevo01_03.jpg
+Warning: Could not find image for 1e8ce908-D6AE9F_sajat_reszvevo02_01.jpg
+Warning: Could not find image for c5f516bd-D6AE9F_sajat_reszvevo03_01.jpg
+Warning: Could not find image for 47fd323c-D6AE9F_sajat_reszvevo03_02.jpg
+Warning: Could not find image for a06a7921-D6AE9F_sajat_reszvevo03_03.jpg
+Warning: Could not find image for 5dfca851-D6AE9F_sajat_reszvevo03_04.jpg
+Warning: Could not find image for 9ec55c5e-ECSGGY_sajat_reszvevo_03_01.jpg
+Warning: Could not find image for 2cf01cec-ECSGGY_sajat_reszvevo_03_02.jpg
+Warning: Could not find image for dc14f195-ECSGGY_sajat_reszvevo_03_03.jpg
+Warning: Could not find image for 77c32f0f-ECSGGY_sajat_reszvevo_03_04.jpg
+Warning: Could not find image for 88d85a32-ECSGGY_sajat_reszvevo_03_05.jpg
+Warning: Could not find image for 0ac562ab-ECSGGY_sajat_reszvevo_04_01.jpg
+Warning: Could not find image for bbd9a40f-ECSGGY_sajat_reszvevo_04_02.jpg
+Warning: Could not find image for 017471e8-ECSGGY_sajat_reszvevo_04_03.jpg
+Warning: Could not find image for ca8d5c6c-ECSGGY_sajat_reszvevo_04_04.jpg
+Warning: Could not find image for c98045b9-ECSGGY_sajat_reszvevo_04_05.jpg
+Warning: Could not find image for 9d6f409f-ECSGGY_sajat_reszvevo_05_01.jpg
+Warning: Could not find image for a29fbf42-ECSGGY_sajat_reszvevo_05_02.jpg
+Warning: Could not find image for 96257e4f-ECSGGY_sajat_reszvevo_05_03.jpg
+Warning: Could not find image for b2c3adca-ECSGGY_sajat_reszvevo_05_04.jpg
+Warning: Could not find image for 9b28dc00-ECSGGY_sajat_reszvevo_05_05.jpg
+Warning: Could not find image for 537e534b-ECSGGY_sajat_reszvevo01_01.jpg
+Warning: Could not find image for 099e4318-ECSGGY_sajat_reszvevo01_02.jpg
+Warning: Could not find image for aac856c5-ECSGGY_sajat_reszvevo01_03.jpg
+Warning: Could not find image for f2c89c93-ECSGGY_sajat_reszvevo01_04.jpg
+Warning: Could not find image for adfddcc9-ECSGGY_sajat_reszvevo02_01.jpg
+Warning: Could not find image for 66a7de93-ECSGGY_sajat_reszvevo02_02.jpg
+Warning: Could not find image for 7d2f8d37-ECSGGY_sajat_reszvevo02_03.jpg
+Warning: Could not find image for 73e5fcca-ECSGGY_sajat_reszvevo02_04.jpg
+Warning: Could not find image for e6f4a610-ECSGGY_sajat_reszvevo02_05.jpg
+Warning: Could not find image for ab34888c-ECSGGY_sajat_reszvevo06_01.jpg
+Warning: Could not find image for 7112f078-ECSGGY_sajat_reszvevo07_01.jpg
+Warning: Could not find image for 54426ad4-ECSGGY_sajat_reszvevo08_01.jpg
+Warning: Could not find image for 56e392e7-ECSGGY_sajat_reszvevo09_01.jpg
+Warning: Could not find image for 128704d5-ECSGGY_sajat_reszvevo09_02.jpg
+Warning: Could not find image for 1a16c792-ECSGGY_sajat_reszvevo09_03.jpg
+Warning: Could not find image for e1a4b8cf-FO6K58_sajat_resztvevo01_01.jpg
+Warning: Could not find image for fe57a3a1-FO6K58_sajat_resztvevo01_02.jpg
+Warning: Could not find image for 0a0da069-FO6K58_sajat_resztvevo01_03.jpg
+Warning: Could not find image for 98fd2e47-FO6K58_sajat_resztvevo01_04.jpg
+Warning: Could not find image for 2488accd-FO6K58_sajat_resztvevo02_01.jpg
+Warning: Could not find image for 9d09a573-FO6K58_sajat_resztvevo02_02.jpg
+Warning: Could not find image for 23ace25f-FO6K58_sajat_resztvevo02_03.jpg
+Warning: Could not find image for a24d73b7-FO6K58_sajat_resztvevo02_04.jpg
+Warning: Could not find image for a4f97b95-FO6K58_sajat_resztvevo03_01.jpg
+Warning: Could not find image for 1669c88f-FO6K58_sajat_resztvevo03_02.jpg
+Warning: Could not find image for c1287a54-FO6K58_sajat_resztvevo03_03.jpg
+Warning: Could not find image for ee86abf4-FO6K58_sajat_resztvevo03_04.jpg
+Warning: Could not find image for e840ccf4-FO6K58_sajat_resztvevo04_01.jpg
+Warning: Could not find image for 423e3460-FO6K58_sajat_resztvevo04_02.jpg
+Warning: Could not find image for b9dab602-FO6K58_sajat_resztvevo04_03.jpg
+Warning: Could not find image for a55a7a7a-FO6K58_sajat_resztvevo04_04.jpg
+Warning: Could not find image for b2593aea-FO6K58_sajat_resztvevo05_01.jpg
+Warning: Could not find image for 5baef7bf-FO6K58_sajat_resztvevo05_02.jpg
+Warning: Could not find image for 3ebc37ab-FO6K58_sajat_resztvevo05_03.jpg
+Warning: Could not find image for dd344fd5-sajat_reszvevo01_01_D6AE9F.jpg
+Warning: Could not find image for 56fa3f1b-sajat_reszvevo01_02_D6AE9F.jpg
+Warning: Could not find image for 139d1bda-sajat_reszvevo02_01_D6AE9F.jpg
+Warning: Could not find image for 3be782d8-sajat_reszvevo_03_03_ECSGGY.jpg
+Warning: Could not find image for 277e3eb1-sajat_reszvevo_03_04_ECSGGY.jpg
+Warning: Could not find image for 893bfb0e-sajat_reszvevo_03_05_ECSGGY.jpg
+Warning: Could not find image for edd1c78f-sajat_reszvevo_04_01_ECSGGY.jpg
+Warning: Could not find image for ae76f282-sajat_reszvevo_04_02_ECSGGY.jpg
+Warning: Could not find image for 7379b751-sajat_reszvevo_04_03_ECSGGY.jpg
+Warning: Could not find image for 9f346919-sajat_reszvevo_04_04_ECSGGY.jpg
+Warning: Could not find image for 1a32ca21-sajat_reszvevo_04_05_ECSGGY.jpg
+Warning: Could not find image for 265b5705-sajat_reszvevo_05_01_ECSGGY.jpg
+Warning: Could not find image for 9b4c6e05-sajat_reszvevo_05_02_ECSGGY.jpg
+Warning: Could not find image for 23625d31-sajat_reszvevo_05_03_ECSGGY.jpg
+Warning: Could not find image for 57856a66-sajat_reszvevo_05_04_ECSGGY.jpg
+Warning: Could not find image for 0cdafa04-sajat_reszvevo_05_05_ECSGGY.jpg
+Warning: Could not find image for 0d7a1aed-sajat_reszvevo01_01_ECSGGY.jpg
+Warning: Could not find image for 0579693c-sajat_reszvevo01_04_ECSGGY.jpg
+Warning: Could not find image for d5fd69fc-sajat_reszvevo02_01_ECSGGY.jpg
+Warning: Could not find image for 83cd441a-sajat_reszvevo02_02_ECSGGY.jpg
+Warning: Could not find image for 74d95564-sajat_reszvevo02_03_ECSGGY.jpg
+Warning: Could not find image for c7c3b4c9-sajat_reszvevo02_04_ECSGGY.jpg
+Warning: Could not find image for 0ad00dc7-sajat_reszvevo02_05_ECSGGY.jpg
+Warning: Could not find image for 506fa885-sajat_reszvevo06_01_ECSGGY.jpg
+Warning: Could not find image for db3ce0dd-sajat_reszvevo07_01_ECSGGY.jpg
+Warning: Could not find image for b2a26a00-sajat_reszvevo08_01_ECSGGY.jpg
+Warning: Could not find image for 3f924fb6-sajat_reszvevo09_01_ECSGGY.jpg
+Warning: Could not find image for d897f82e-sajat_reszvevo09_02_ECSGGY.jpg
+Warning: Could not find image for 93b963e8-sajat_reszvevo09_03_ECSGGY.jpg
+Warning: Could not find image for 7455cede-sajat_reszvevo_03_01_ECSGGY.jpg
+Warning: Could not find image for f427f94d-sajat_reszvevo_03_02_ECSGGY.jpg
+Warning: Could not find image for 7bab060a-sajat_resztvevo03_01_D6AE9F.jpg
+Warning: Could not find image for 18ceaaae-sajat_resztvevo03_02_D6AE9F.jpg
+Warning: Could not find image for ce86f481-sajat_resztvevo03_03_D6AE9F.jpg
+Warning: Could not find image for d7bc68ae-sajat_resztvevo03_04_D6AE9F.jpg
+Warning: Could not find image for b3c7380b-sajat_resztvevo04_01_D6AE9F.jpg
+Warning: Could not find image for 06e368a1-sajat_resztvevo04_02_D6AE9F.jpg
+Warning: Could not find image for 2ddbfd5a-sajat_resztvevo04_03_D6AE9F.jpg
+Warning: Could not find image for 43c279b1-sajat_resztvevo04_04_D6AE9F.jpg
+Warning: Could not find image for d1e19c39-sajat_resztvevo05_01_D6AE9F.jpg
+Warning: Could not find image for c56a35ef-sajat_resztvevo05_02_D6AE9F.jpg
+Warning: Could not find image for 74f356c1-sajat_resztvevo05_03_D6AE9F.jpg
+Warning: Could not find image for b97d6010-sajat_reszvevo02_01_D6AE9F_D6AE9F.jpg
+Warning: Could not find image for 0fb63311-sajat_reszvevo03_01_D6AE9F_D6AE9F.jpg
+Warning: Could not find image for bd84e4cb-sajat_reszvevo03_02_D6AE9F_D6AE9F.jpg
+Warning: Could not find image for 60b0793e-sajat_reszvevo03_04_D6AE9F_D6AE9F.jpg
+Warning: Could not find image for 0b06c216-sajat_resztvevo01_01_D6AE9F.jpg
+Warning: Could not find image for b1f08bd0-sajat_resztvevo01_02_D6AE9F.jpg
+Warning: Could not find image for abcb9106-sajat_resztvevo01_03_D6AE9F.jpg
+Warning: Could not find image for db095e43-sajat_resztvevo01_04_D6AE9F.jpg
+Warning: Could not find image for 8c871ac4-sajat_resztvevo02_02_D6AE9F.jpg
+Warning: Could not find image for 77b18d95-sajat_resztvevo02_04_D6AE9F.jpg
+Warning: Could not find image for dfda76eb-sajat_reszvevo01_01_ECSGGY.jpg
+Warning: Could not find image for 4a6f758c-sajat_reszvevo01_02_ECSGGY.jpg
+Warning: Could not find image for 03fa36ea-sajat_reszvevo01_03_ECSGGY.jpg
+Warning: Could not find image for 79dad6f9-sajat_reszvevo02_01_ECSGGY.jpg
+Warning: Could not parse /data/anklealign/anklealign/consensus/ITWQ3V.json
+Warning: Could not find image for e14adf70-FO6K58_sajat_resztvevo01_01.jpg
+Warning: Could not find image for 09a256de-FO6K58_sajat_resztvevo01_02.jpg
+Warning: Could not find image for d7e9349f-FO6K58_sajat_resztvevo01_03.jpg
+Warning: Could not find image for a6db13b6-FO6K58_sajat_resztvevo01_04.jpg
+Warning: Could not find image for 23a60f32-FO6K58_sajat_resztvevo02_01.jpg
+Warning: Could not find image for f05eceef-FO6K58_sajat_resztvevo02_02.jpg
+Warning: Could not find image for d969d2c4-FO6K58_sajat_resztvevo02_03.jpg
+Warning: Could not find image for 8af51d48-FO6K58_sajat_resztvevo02_04.jpg
+Warning: Could not find image for 60344e68-FO6K58_sajat_resztvevo03_01.jpg
+Warning: Could not find image for 5a718646-FO6K58_sajat_resztvevo03_02.jpg
+Warning: Could not find image for 8e0e8358-FO6K58_sajat_resztvevo03_03.jpg
+Warning: Could not find image for 43d89394-FO6K58_sajat_resztvevo03_04.jpg
+Warning: Could not find image for 7dffc872-FO6K58_sajat_resztvevo04_01.jpg
+Warning: Could not find image for db576a76-FO6K58_sajat_resztvevo04_02.jpg
+Warning: Could not find image for 27fee4cd-FO6K58_sajat_resztvevo04_03.jpg
+Warning: Could not find image for 6fa3bbe0-FO6K58_sajat_resztvevo04_04.jpg
+Warning: Could not find image for 0a955937-FO6K58_sajat_resztvevo05_01.jpg
+Warning: Could not find image for b3487e65-FO6K58_sajat_resztvevo05_02.jpg
+Warning: Could not find image for 75d87ea2-FO6K58_sajat_resztvevo05_03.jpg
+Warning: Could not find image for ee5a9d01-sajat_reszvevo01_01_2.jpg
+Warning: Could not find image for 239dbcc2-sajat_reszvevo01_02_2.jpg
+Warning: Could not find image for ef3c0285-sajat_reszvevo01_03_2.jpg
+Warning: Could not find image for c39d1eda-sajat_reszvevo02_01_2.jpg
+Warning: Could not find image for 12a7b640-193684925-back-view-of-a-woman-s-bare-feet-and-high-heels-on-a-white-s_vS6AjQR.jpg
+
+Total samples with resolved images: 833
+
+Class distribution:
+label_name
+2_Neutralis     559
+1_Pronacio      193
+3_Szupinacio     81
+Name: count, dtype: int64
+
+Split sizes:
+  Train: 583 (70.0%)
+  Val:   125 (15.0%)
+  Test:  125 (15.0%)
+
+Class distribution per split:
+label_name  1_Pronacio  2_Neutralis  3_Szupinacio
+split                                            
+test                29           84            12
+train              135          391            57
+val                 29           84            12
+
+Dataset manifest saved to /app/output/dataset_manifest.csv
+Class info saved to /app/output/class_info.json
+
+============================================================
+Data processing completed successfully!
+============================================================
+
+Step 2: Running model training...
+Downloading: "https://download.pytorch.org/models/resnet18-f37072fd.pth" to /root/.cache/torch/hub/checkpoints/resnet18-f37072fd.pth
+
+============================================================
+TRAINING
+============================================================
+============================================================
+CONFIGURATION
+============================================================
+
+[Paths]
+  Data directory: /data
+  Output directory: /app/output
+  Models directory: /app/output/models
+  Consensus directory: /data/anklealign/anklealign/consensus
+
+[Training Hyperparameters]
+  Number of epochs: 50
+  Batch size: 32
+  Learning rate: 0.0001
+  Early stopping patience: 10
+  Number of workers: 0
+  Image size: 224x224
+
+[Model Configuration]
+  Model: resnet18
+  Pretrained: True
+  Number of classes: 3
+
+[Data Split Ratios]
+  Train: 70%
+  Validation: 15%
+  Test: 15%
+  Random state: 42
+
+[Classes]
+  0: 1_Pronacio -> Pronacio
+  1: 2_Neutralis -> Neutralis
+  2: 3_Szupinacio -> Szupinacio
+============================================================
+
+Loaded manifest with 833 samples
+
+============================================================
+DATA SUMMARY
+============================================================
+
+[Dataset Splits]
+  Training samples:   583 (70.0%)
+  Validation samples: 125 (15.0%)
+  Test samples:       125 (15.0%)
+  Total samples:      833
+
+[Class Distribution]
+
+  Train:
+    2_Neutralis: 391
+    1_Pronacio: 135
+    3_Szupinacio: 57
+
+  Validation:
+    2_Neutralis: 84
+    1_Pronacio: 29
+    3_Szupinacio: 12
+
+  Test:
+    2_Neutralis: 84
+    1_Pronacio: 29
+    3_Szupinacio: 12
+============================================================
+
+
+[Device Information]
+  Using: CPU
+  0%|          | 0.00/44.7M [00:00<?, ?B/s]  0%|          | 120k/44.7M [00:00<00:44, 1.05MB/s]  1%|          | 544k/44.7M [00:00<00:16, 2.85MB/s]  4%|▍         | 1.86M/44.7M [00:00<00:05, 7.70MB/s] 12%|█▏        | 5.49M/44.7M [00:00<00:02, 19.4MB/s] 26%|██▌       | 11.5M/44.7M [00:00<00:00, 35.0MB/s] 39%|███▊      | 17.2M/44.7M [00:00<00:00, 42.4MB/s] 53%|█████▎    | 23.5M/44.7M [00:00<00:00, 49.5MB/s] 64%|██████▍   | 28.5M/44.7M [00:00<00:00, 50.3MB/s] 77%|███████▋  | 34.3M/44.7M [00:00<00:00, 53.5MB/s] 88%|████████▊ | 39.5M/44.7M [00:01<00:00, 53.4MB/s]100%|█████████▉| 44.6M/44.7M [00:01<00:00, 52.1MB/s]100%|██████████| 44.7M/44.7M [00:01<00:00, 41.1MB/s]
+Training:   0%|          | 0/19 [00:00<?, ?it/s]
+============================================================
+MODEL ARCHITECTURE SUMMARY
+============================================================
+
+Model: resnet18 (pretrained=True)
+
+[Architecture]
+ResNet(
+  (conv1): Conv2d(3, 64, kernel_size=(7, 7), stride=(2, 2), padding=(3, 3), bias=False)
+  (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (relu): ReLU(inplace=True)
+  (maxpool): MaxPool2d(kernel_size=3, stride=2, padding=1, dilation=1, ceil_mode=False)
+  (layer1): Sequential(
+    (0): BasicBlock(
+      (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (1): BasicBlock(
+      (conv1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (layer2): Sequential(
+    (0): BasicBlock(
+      (conv1): Conv2d(64, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (downsample): Sequential(
+        (0): Conv2d(64, 128, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): BasicBlock(
+      (conv1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (layer3): Sequential(
+    (0): BasicBlock(
+      (conv1): Conv2d(128, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (downsample): Sequential(
+        (0): Conv2d(128, 256, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): BasicBlock(
+      (conv1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (layer4): Sequential(
+    (0): BasicBlock(
+      (conv1): Conv2d(256, 512, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (downsample): Sequential(
+        (0): Conv2d(256, 512, kernel_size=(1, 1), stride=(2, 2), bias=False)
+        (1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): BasicBlock(
+      (conv1): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace=True)
+      (conv2): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn2): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (avgpool): AdaptiveAvgPool2d(output_size=(1, 1))
+  (fc): Linear(in_features=512, out_features=3, bias=True)
+)
+
+[Parameter Counts]
+  Trainable parameters:     11,178,051
+  Non-trainable parameters: 0
+  Total parameters:         11,178,051
+
+  Model size (approx):      42.64 MB (float32)
+============================================================
+
+
+Starting training for 50 epochs...
+------------------------------------------------------------
+
+Epoch 1/50
+Training:   0%|          | 0/19 [00:05<?, ?it/s, loss=1.28, acc=25]Training:   5%|▌         | 1/19 [00:05<01:35,  5.30s/it, loss=1.28, acc=25]Training:   5%|▌         | 1/19 [00:13<01:35,  5.30s/it, loss=1.31, acc=28.1]Training:  11%|█         | 2/19 [00:13<01:57,  6.90s/it, loss=1.31, acc=28.1]Training:  11%|█         | 2/19 [00:18<01:57,  6.90s/it, loss=1.12, acc=33.3]Training:  16%|█▌        | 3/19 [00:18<01:37,  6.11s/it, loss=1.12, acc=33.3]Training:  16%|█▌        | 3/19 [00:23<01:37,  6.11s/it, loss=0.947, acc=36.7]Training:  21%|██        | 4/19 [00:23<01:22,  5.53s/it, loss=0.947, acc=36.7]Training:  21%|██        | 4/19 [00:27<01:22,  5.53s/it, loss=1.08, acc=40.6] Training:  26%|██▋       | 5/19 [00:27<01:10,  5.02s/it, loss=1.08, acc=40.6]Training:  26%|██▋       | 5/19 [00:31<01:10,  5.02s/it, loss=0.905, acc=45.3]Training:  32%|███▏      | 6/19 [00:31<01:03,  4.89s/it, loss=0.905, acc=45.3]Training:  32%|███▏      | 6/19 [00:36<01:03,  4.89s/it, loss=1.11, acc=46.9] Training:  37%|███▋      | 7/19 [00:36<00:57,  4.77s/it, loss=1.11, acc=46.9]Training:  37%|███▋      | 7/19 [00:41<00:57,  4.77s/it, loss=0.993, acc=48] Training:  42%|████▏     | 8/19 [00:41<00:53,  4.85s/it, loss=0.993, acc=48]Training:  42%|████▏     | 8/19 [00:46<00:53,  4.85s/it, loss=0.995, acc=50.3]Training:  47%|████▋     | 9/19 [00:46<00:50,  5.05s/it, loss=0.995, acc=50.3]Training:  47%|████▋     | 9/19 [00:51<00:50,  5.05s/it, loss=1.23, acc=49.7] Training:  53%|█████▎    | 10/19 [00:51<00:43,  4.78s/it, loss=1.23, acc=49.7]Training:  53%|█████▎    | 10/19 [00:56<00:43,  4.78s/it, loss=0.907, acc=51.7]Training:  58%|█████▊    | 11/19 [00:56<00:38,  4.87s/it, loss=0.907, acc=51.7]Training:  58%|█████▊    | 11/19 [01:00<00:38,  4.87s/it, loss=1.02, acc=52.9] Training:  63%|██████▎   | 12/19 [01:00<00:32,  4.63s/it, loss=1.02, acc=52.9]Training:  63%|██████▎   | 12/19 [01:04<00:32,  4.63s/it, loss=0.953, acc=53.8]Training:  68%|██████▊   | 13/19 [01:04<00:27,  4.57s/it, loss=0.953, acc=53.8]Training:  68%|██████▊   | 13/19 [01:08<00:27,  4.57s/it, loss=1.05, acc=54.2] Training:  74%|███████▎  | 14/19 [01:08<00:21,  4.30s/it, loss=1.05, acc=54.2]Training:  74%|███████▎  | 14/19 [01:13<00:21,  4.30s/it, loss=0.785, acc=55.4]Training:  79%|███████▉  | 15/19 [01:13<00:18,  4.53s/it, loss=0.785, acc=55.4]Training:  79%|███████▉  | 15/19 [01:17<00:18,  4.53s/it, loss=0.556, acc=57.4]Training:  84%|████████▍ | 16/19 [01:17<00:13,  4.48s/it, loss=0.556, acc=57.4]Training:  84%|████████▍ | 16/19 [01:21<00:13,  4.48s/it, loss=0.672, acc=57.9]Training:  89%|████████▉ | 17/19 [01:21<00:08,  4.19s/it, loss=0.672, acc=57.9]Training:  89%|████████▉ | 17/19 [01:25<00:08,  4.19s/it, loss=0.68, acc=59]   Training:  95%|█████████▍| 18/19 [01:25<00:04,  4.16s/it, loss=0.68, acc=59]Training:  95%|█████████▍| 18/19 [01:26<00:04,  4.16s/it, loss=0.749, acc=59]Training: 100%|██████████| 19/19 [01:26<00:00,  3.24s/it, loss=0.749, acc=59]                                                                             Validating:   0%|          | 0/4 [00:00<?, ?it/s]Validating:  25%|██▌       | 1/4 [00:03<00:09,  3.28s/it]Validating:  50%|█████     | 2/4 [00:07<00:07,  3.70s/it]Validating:  75%|███████▌  | 3/4 [00:10<00:03,  3.32s/it]Validating: 100%|██████████| 4/4 [00:13<00:00,  3.18s/it]                                                         Train Loss: 0.9754, Train Acc: 59.01%
+Val Loss: 0.7590, Val Acc: 73.60%
+New best model saved! Val Acc: 73.60%
+
+Epoch 2/50
+Training:   0%|          | 0/19 [00:00<?, ?it/s]Training:   0%|          | 0/19 [00:04<?, ?it/s, loss=0.687, acc=68.8]Training:   5%|▌         | 1/19 [00:04<01:23,  4.65s/it, loss=0.687, acc=68.8]Training:   5%|▌         | 1/19 [00:10<01:23,  4.65s/it, loss=0.926, acc=67.2]Training:  11%|█         | 2/19 [00:10<01:27,  5.14s/it, loss=0.926, acc=67.2]Training:  11%|█         | 2/19 [00:14<01:27,  5.14s/it, loss=0.749, acc=69.8]Training:  16%|█▌        | 3/19 [00:15<01:20,  5.01s/it, loss=0.749, acc=69.8]Training:  16%|█▌        | 3/19 [00:20<01:20,  5.01s/it, loss=0.619, acc=70.3]Training:  21%|██        | 4/19 [00:20<01:16,  5.09s/it, loss=0.619, acc=70.3]Training:  21%|██        | 4/19 [00:25<01:16,  5.09s/it, loss=0.849, acc=70.6]Training:  26%|██▋       | 5/19 [00:25<01:12,  5.18s/it, loss=0.849, acc=70.6]Training:  26%|██▋       | 5/19 [00:30<01:12,  5.18s/it, loss=0.738, acc=71.4]Training:  32%|███▏      | 6/19 [00:30<01:07,  5.17s/it, loss=0.738, acc=71.4]Training:  32%|███▏      | 6/19 [00:34<01:07,  5.17s/it, loss=0.81, acc=71.4] Training:  37%|███▋      | 7/19 [00:34<00:55,  4.65s/it, loss=0.81, acc=71.4]Training:  37%|███▋      | 7/19 [00:39<00:55,  4.65s/it, loss=0.829, acc=70.3]Training:  42%|████▏     | 8/19 [00:39<00:52,  4.80s/it, loss=0.829, acc=70.3]Training:  42%|████▏     | 8/19 [00:44<00:52,  4.80s/it, loss=0.549, acc=71.9]Training:  47%|████▋     | 9/19 [00:44<00:49,  4.90s/it, loss=0.549, acc=71.9]Training:  47%|████▋     | 9/19 [00:51<00:49,  4.90s/it, loss=0.827, acc=71.2]Training:  53%|█████▎    | 10/19 [00:51<00:49,  5.47s/it, loss=0.827, acc=71.2]Training:  53%|█████▎    | 10/19 [00:54<00:49,  5.47s/it, loss=0.586, acc=71.6]Training:  58%|█████▊    | 11/19 [00:54<00:38,  4.84s/it, loss=0.586, acc=71.6]Training:  58%|█████▊    | 11/19 [00:59<00:38,  4.84s/it, loss=0.629, acc=72.1]Training:  63%|██████▎   | 12/19 [00:59<00:33,  4.82s/it, loss=0.629, acc=72.1]Training:  63%|██████▎   | 12/19 [08:15<00:33,  4.82s/it, loss=1.12, acc=71.2] Training:  68%|██████▊   | 13/19 [08:15<13:32, 135.50s/it, loss=1.12, acc=71.2]Training:  68%|██████▊   | 13/19 [08:20<13:32, 135.50s/it, loss=0.633, acc=71.2]Training:  74%|███████▎  | 14/19 [08:20<08:00, 96.11s/it, loss=0.633, acc=71.2] Training:  74%|███████▎  | 14/19 [08:24<08:00, 96.11s/it, loss=0.578, acc=71.9]Training:  79%|███████▉  | 15/19 [08:24<04:33, 68.32s/it, loss=0.578, acc=71.9]Training:  79%|███████▉  | 15/19 [08:28<04:33, 68.32s/it, loss=0.498, acc=72.7]Training:  84%|████████▍ | 16/19 [08:28<02:26, 48.98s/it, loss=0.498, acc=72.7]Training:  84%|████████▍ | 16/19 [08:32<02:26, 48.98s/it, loss=0.872, acc=72.2]Training:  89%|████████▉ | 17/19 [08:32<01:10, 35.33s/it, loss=0.872, acc=72.2]Training:  89%|████████▉ | 17/19 [08:35<01:10, 35.33s/it, loss=0.649, acc=72]  Training:  95%|█████████▍| 18/19 [08:35<00:25, 25.76s/it, loss=0.649, acc=72]Training:  95%|█████████▍| 18/19 [08:37<00:25, 25.76s/it, loss=0.664, acc=72]Training: 100%|██████████| 19/19 [08:37<00:00, 18.45s/it, loss=0.664, acc=72]                                                                             Validating:   0%|          | 0/4 [00:00<?, ?it/s]Validating:  25%|██▌       | 1/4 [00:03<00:09,  3.19s/it]Validating:  50%|█████     | 2/4 [00:07<00:07,  3.57s/it]Validating:  75%|███████▌  | 3/4 [00:09<00:03,  3.23s/it]Validating: 100%|██████████| 4/4 [00:12<00:00,  3.06s/it]                                                         Train Loss: 0.7294, Train Acc: 72.04%
+Val Loss: 0.7032, Val Acc: 75.20%
+New best model saved! Val Acc: 75.20%
+
+Epoch 3/50
+Training:   0%|          | 0/19 [00:00<?, ?it/s]Training:   0%|          | 0/19 [00:04<?, ?it/s, loss=0.59, acc=78.1]Training:   5%|▌         | 1/19 [00:04<01:22,  4.56s/it, loss=0.59, acc=78.1]Training:   5%|▌         | 1/19 [00:10<01:22,  4.56s/it, loss=0.68, acc=79.7]Training:  11%|█         | 2/19 [00:10<01:30,  5.32s/it, loss=0.68, acc=79.7]Training:  11%|█         | 2/19 [00:15<01:30,  5.32s/it, loss=0.612, acc=79.2]Training:  16%|█▌        | 3/19 [00:15<01:21,  5.07s/it, loss=0.612, acc=79.2]Training:  16%|█▌        | 3/19 [00:20<01:21,  5.07s/it, loss=0.603, acc=78.9]Training:  21%|██        | 4/19 [00:20<01:14,  4.97s/it, loss=0.603, acc=78.9]Training:  21%|██        | 4/19 [00:24<01:14,  4.97s/it, loss=0.713, acc=76.9]Training:  26%|██▋       | 5/19 [00:24<01:07,  4.86s/it, loss=0.713, acc=76.9]Training:  26%|██▋       | 5/19 [00:30<01:07,  4.86s/it, loss=0.552, acc=78.1]Training:  32%|███▏      | 6/19 [00:30<01:08,  5.29s/it, loss=0.552, acc=78.1]Training:  32%|███▏      | 6/19 [00:34<01:08,  5.29s/it, loss=0.834, acc=75]  Training:  37%|███▋      | 7/19 [00:34<00:57,  4.83s/it, loss=0.834, acc=75]Training:  37%|███▋      | 7/19 [00:37<00:57,  4.83s/it, loss=0.601, acc=74.6]Training:  42%|████▏     | 8/19 [00:37<00:45,  4.15s/it, loss=0.601, acc=74.6]Training:  42%|████▏     | 8/19 [00:42<00:45,  4.15s/it, loss=0.935, acc=72.6]Training:  47%|████▋     | 9/19 [00:42<00:45,  4.51s/it, loss=0.935, acc=72.6]Training:  47%|████▋     | 9/19 [00:47<00:45,  4.51s/it, loss=0.688, acc=72.8]Training:  53%|█████▎    | 10/19 [00:47<00:41,  4.62s/it, loss=0.688, acc=72.8]Training:  53%|█████▎    | 10/19 [00:52<00:41,  4.62s/it, loss=0.628, acc=72.7]Training:  58%|█████▊    | 11/19 [00:52<00:37,  4.73s/it, loss=0.628, acc=72.7]Training:  58%|█████▊    | 11/19 [00:56<00:37,  4.73s/it, loss=0.757, acc=72.7]Training:  63%|██████▎   | 12/19 [00:56<00:31,  4.50s/it, loss=0.757, acc=72.7]Training:  63%|██████▎   | 12/19 [01:01<00:31,  4.50s/it, loss=0.554, acc=73.3]Training:  68%|██████▊   | 13/19 [01:01<00:28,  4.74s/it, loss=0.554, acc=73.3]Training:  68%|██████▊   | 13/19 [01:06<00:28,  4.74s/it, loss=1.1, acc=72.3]  Training:  74%|███████▎  | 14/19 [01:06<00:23,  4.63s/it, loss=1.1, acc=72.3]Training:  74%|███████▎  | 14/19 [01:09<00:23,  4.63s/it, loss=0.707, acc=72.1]Training:  79%|███████▉  | 15/19 [01:09<00:17,  4.39s/it, loss=0.707, acc=72.1]Training:  79%|███████▉  | 15/19 [01:14<00:17,  4.39s/it, loss=0.71, acc=72.3] Training:  84%|████████▍ | 16/19 [01:14<00:13,  4.41s/it, loss=0.71, acc=72.3]Training:  84%|████████▍ | 16/19 [01:18<00:13,  4.41s/it, loss=0.578, acc=72.8]Training:  89%|████████▉ | 17/19 [01:18<00:08,  4.32s/it, loss=0.578, acc=72.8]Training:  89%|████████▉ | 17/19 [01:23<00:08,  4.32s/it, loss=0.536, acc=73.3]Training:  95%|█████████▍| 18/19 [01:23<00:04,  4.39s/it, loss=0.536, acc=73.3]Training:  95%|█████████▍| 18/19 [01:23<00:04,  4.39s/it, loss=0.692, acc=73.1]Training: 100%|██████████| 19/19 [01:23<00:00,  3.24s/it, loss=0.692, acc=73.1]                                                                               Validating:   0%|          | 0/4 [00:00<?, ?it/s]Validating:  25%|██▌       | 1/4 [00:03<00:09,  3.29s/it]Validating:  50%|█████     | 2/4 [00:07<00:07,  3.69s/it]Validating:  75%|███████▌  | 3/4 [00:10<00:03,  3.31s/it]Validating: 100%|██████████| 4/4 [00:12<00:00,  3.13s/it]                                                         Train Loss: 0.6879, Train Acc: 73.07%
+Val Loss: 0.7827, Val Acc: 69.60%
+No improvement for 1 epochs
+
+Epoch 4/50
+Training:   0%|          | 0/19 [00:00<?, ?it/s]Training:   0%|          | 0/19 [00:04<?, ?it/s, loss=0.68, acc=75]Training:   5%|▌         | 1/19 [00:04<01:25,  4.74s/it, loss=0.68, acc=75]Training:   5%|▌         | 1/19 [00:08<01:25,  4.74s/it, loss=0.988, acc=68.8]Training:  11%|█         | 2/19 [00:08<01:09,  4.09s/it, loss=0.988, acc=68.8]Training:  11%|█         | 2/19 [00:13<01:09,  4.09s/it, loss=0.776, acc=68.8]Training:  16%|█▌        | 3/19 [00:13<01:16,  4.76s/it, loss=0.776, acc=68.8]Training:  16%|█▌        | 3/19 [09:36<01:16,  4.76s/it, loss=0.794, acc=69.5]Training:  21%|██        | 4/19 [09:36<56:13, 224.91s/it, loss=0.794, acc=69.5]Training:  21%|██        | 4/19 [09:41<56:13, 224.91s/it, loss=0.647, acc=69.4]Training:  26%|██▋       | 5/19 [09:41<33:58, 145.62s/it, loss=0.647, acc=69.4]Training:  26%|██▋       | 5/19 [09:46<33:58, 145.62s/it, loss=0.444, acc=72.4]Training:  32%|███▏      | 6/19 [09:46<21:11, 97.78s/it, loss=0.444, acc=72.4] Training:  32%|███▏      | 6/19 [09:50<21:11, 97.78s/it, loss=0.575, acc=72.8]Training:  37%|███▋      | 7/19 [09:50<13:24, 67.04s/it, loss=0.575, acc=72.8]Training:  37%|███▋      | 7/19 [09:53<13:24, 67.04s/it, loss=0.763, acc=71.5]Training:  42%|████▏     | 8/19 [09:53<08:33, 46.69s/it, loss=0.763, acc=71.5]Training:  42%|████▏     | 8/19 [09:57<08:33, 46.69s/it, loss=0.655, acc=71.9]Training:  47%|████▋     | 9/19 [09:57<05:34, 33.47s/it, loss=0.655, acc=71.9]Training:  47%|████▋     | 9/19 [10:02<05:34, 33.47s/it, loss=0.599, acc=72.5]Training:  53%|█████▎    | 10/19 [10:02<03:41, 24.61s/it, loss=0.599, acc=72.5]Training:  53%|█████▎    | 10/19 [10:05<03:41, 24.61s/it, loss=0.457, acc=73]  Training:  58%|█████▊    | 11/19 [10:05<02:25, 18.17s/it, loss=0.457, acc=73]Training:  58%|█████▊    | 11/19 [10:10<02:25, 18.17s/it, loss=1.04, acc=71.9]Training:  63%|██████▎   | 12/19 [10:10<01:38, 14.08s/it, loss=1.04, acc=71.9]Training:  63%|██████▎   | 12/19 [10:15<01:38, 14.08s/it, loss=0.502, acc=72.6]Training:  68%|██████▊   | 13/19 [10:15<01:07, 11.23s/it, loss=0.502, acc=72.6]Training:  68%|██████▊   | 13/19 [10:20<01:07, 11.23s/it, loss=0.746, acc=72.3]Training:  74%|███████▎  | 14/19 [10:20<00:47,  9.47s/it, loss=0.746, acc=72.3]Training:  74%|███████▎  | 14/19 [10:25<00:47,  9.47s/it, loss=0.699, acc=72.7]Training:  79%|███████▉  | 15/19 [10:25<00:32,  8.13s/it, loss=0.699, acc=72.7]Training:  79%|███████▉  | 15/19 [10:30<00:32,  8.13s/it, loss=0.692, acc=72.5]Training:  84%|████████▍ | 16/19 [10:30<00:21,  7.20s/it, loss=0.692, acc=72.5]Training:  84%|████████▍ | 16/19 [10:34<00:21,  7.20s/it, loss=0.951, acc=71.5]Training:  89%|████████▉ | 17/19 [10:34<00:12,  6.27s/it, loss=0.951, acc=71.5]Training:  89%|████████▉ | 17/19 [10:39<00:12,  6.27s/it, loss=0.707, acc=71.7]Training:  95%|█████████▍| 18/19 [10:39<00:05,  5.86s/it, loss=0.707, acc=71.7]Training:  95%|█████████▍| 18/19 [10:40<00:05,  5.86s/it, loss=0.857, acc=71.5]Training: 100%|██████████| 19/19 [10:40<00:00,  4.44s/it, loss=0.857, acc=71.5]                                                                               Validating:   0%|          | 0/4 [00:00<?, ?it/s]Validating:  25%|██▌       | 1/4 [00:03<00:09,  3.25s/it]Validating:  50%|█████     | 2/4 [00:07<00:07,  3.65s/it]Validating:  75%|███████▌  | 3/4 [00:09<00:03,  3.27s/it]Validating: 100%|██████████| 4/4 [00:12<00:00,  3.09s/it]                                                         Train Loss: 0.7081, Train Acc: 71.53%
+Val Loss: 0.7196, Val Acc: 74.40%
+No improvement for 2 epochs
+
+Epoch 5/50
+Training:   0%|          | 0/19 [00:00<?, ?it/s]Training:   0%|          | 0/19 [00:03<?, ?it/s, loss=0.606, acc=71.9]Training:   5%|▌         | 1/19 [00:03<01:05,  3.63s/it, loss=0.606, acc=71.9]Training:   5%|▌         | 1/19 [00:07<01:05,  3.63s/it, loss=0.713, acc=73.4]Training:  11%|█         | 2/19 [00:07<01:07,  3.94s/it, loss=0.713, acc=73.4]Training:  11%|█         | 2/19 [00:11<01:07,  3.94s/it, loss=0.589, acc=75]  Training:  16%|█▌        | 3/19 [00:11<00:57,  3.62s/it, loss=0.589, acc=75]Training:  16%|█▌        | 3/19 [00:16<00:57,  3.62s/it, loss=0.822, acc=71.1]Training:  21%|██        | 4/19 [00:16<01:04,  4.29s/it, loss=0.822, acc=71.1]Training:  21%|██        | 4/19 [00:19<01:04,  4.29s/it, loss=0.613, acc=71.9]Training:  26%|██▋       | 5/19 [00:19<00:56,  4.01s/it, loss=0.613, acc=71.9]Training:  26%|██▋       | 5/19 [00:23<00:56,  4.01s/it, loss=0.515, acc=72.4]Training:  32%|███▏      | 6/19 [00:23<00:51,  3.97s/it, loss=0.515, acc=72.4]Training:  32%|███▏      | 6/19 [00:28<00:51,  3.97s/it, loss=0.563, acc=73.2]Training:  37%|███▋      | 7/19 [00:28<00:50,  4.18s/it, loss=0.563, acc=73.2]Training:  37%|███▋      | 7/19 [00:33<00:50,  4.18s/it, loss=0.665, acc=73.4]Training:  42%|████▏     | 8/19 [00:33<00:47,  4.33s/it, loss=0.665, acc=73.4]Training:  42%|████▏     | 8/19 [00:36<00:47,  4.33s/it, loss=0.883, acc=72.2]Training:  47%|████▋     | 9/19 [00:36<00:41,  4.19s/it, loss=0.883, acc=72.2]Training:  47%|████▋     | 9/19 [00:42<00:41,  4.19s/it, loss=0.611, acc=72.2]Training:  53%|█████▎    | 10/19 [00:42<00:41,  4.60s/it, loss=0.611, acc=72.2]Training:  53%|█████▎    | 10/19 [00:47<00:41,  4.60s/it, loss=0.659, acc=72.4]Training:  58%|█████▊    | 11/19 [00:47<00:37,  4.69s/it, loss=0.659, acc=72.4]Training:  58%|█████▊    | 11/19 [00:51<00:37,  4.69s/it, loss=0.652, acc=72.7]Training:  63%|██████▎   | 12/19 [00:51<00:32,  4.61s/it, loss=0.652, acc=72.7]Training:  63%|██████▎   | 12/19 [00:56<00:32,  4.61s/it, loss=0.722, acc=72.6]Training:  68%|██████▊   | 13/19 [00:56<00:27,  4.54s/it, loss=0.722, acc=72.6]Training:  68%|██████▊   | 13/19 [01:01<00:27,  4.54s/it, loss=0.907, acc=71.7]Training:  74%|███████▎  | 14/19 [01:01<00:23,  4.76s/it, loss=0.907, acc=71.7]Training:  74%|███████▎  | 14/19 [01:07<00:23,  4.76s/it, loss=0.585, acc=71.9]Training:  79%|███████▉  | 15/19 [01:07<00:20,  5.23s/it, loss=0.585, acc=71.9]Training:  79%|███████▉  | 15/19 [01:12<00:20,  5.23s/it, loss=0.551, acc=72.9]Training:  84%|████████▍ | 16/19 [01:12<00:15,  5.18s/it, loss=0.551, acc=72.9]Training:  84%|████████▍ | 16/19 [01:19<00:15,  5.18s/it, loss=0.785, acc=72.6]Training:  89%|████████▉ | 17/19 [01:19<00:11,  5.70s/it, loss=0.785, acc=72.6]Training:  89%|████████▉ | 17/19 [01:24<00:11,  5.70s/it, loss=0.601, acc=72.7]Training:  95%|█████████▍| 18/19 [01:24<00:05,  5.35s/it, loss=0.601, acc=72.7]Training:  95%|█████████▍| 18/19 [01:24<00:05,  5.35s/it, loss=0.479, acc=72.7]Training: 100%|██████████| 19/19 [01:24<00:00,  3.95s/it, loss=0.479, acc=72.7]                                                                               Validating:   0%|          | 0/4 [00:00<?, ?it/s]Validating:  25%|██▌       | 1/4 [00:03<00:09,  3.17s/it]Validating:  50%|█████     | 2/4 [00:06<00:07,  3.55s/it]Validating:  75%|███████▌  | 3/4 [00:09<00:03,  3.20s/it]Validating: 100%|██████████| 4/4 [00:12<00:00,  3.02s/it]                                                         Train Loss: 0.6668, Train Acc: 72.73%
+Val Loss: 0.7570, Val Acc: 72.80%
+No improvement for 3 epochs
+
+Epoch 6/50
+Training:   0%|          | 0/19 [00:00<?, ?it/s]Training:   0%|          | 0/19 [06:18<?, ?it/s, loss=0.372, acc=84.4]Training:   5%|▌         | 1/19 [06:18<1:53:26, 378.14s/it, loss=0.372, acc=84.4]Training:   5%|▌         | 1/19 [06:22<1:53:26, 378.14s/it, loss=0.561, acc=76.6]Training:  11%|█         | 2/19 [06:22<44:46, 158.03s/it, loss=0.561, acc=76.6]  Training:  11%|█         | 2/19 [06:27<44:46, 158.03s/it, loss=0.684, acc=72.9]Training:  16%|█▌        | 3/19 [06:27<23:30, 88.16s/it, loss=0.684, acc=72.9] Training:  16%|█▌        | 3/19 [06:31<23:30, 88.16s/it, loss=0.532, acc=74.2]Training:  21%|██        | 4/19 [06:31<13:46, 55.12s/it, loss=0.532, acc=74.2]Training:  21%|██        | 4/19 [06:36<13:46, 55.12s/it, loss=0.551, acc=74.4]Training:  26%|██▋       | 5/19 [06:36<08:39, 37.10s/it, loss=0.551, acc=74.4]Training:  26%|██▋       | 5/19 [06:41<08:39, 37.10s/it, loss=0.808, acc=73.4]Training:  32%|███▏      | 6/19 [06:41<05:37, 25.95s/it, loss=0.808, acc=73.4]Training:  32%|███▏      | 6/19 [06:46<05:37, 25.95s/it, loss=0.375, acc=75.4]Training:  37%|███▋      | 7/19 [06:46<03:51, 19.26s/it, loss=0.375, acc=75.4]Training:  37%|███▋      | 7/19 [06:51<03:51, 19.26s/it, loss=0.62, acc=75.8] Training:  42%|████▏     | 8/19 [06:51<02:41, 14.70s/it, loss=0.62, acc=75.8]Training:  42%|████▏     | 8/19 [06:56<02:41, 14.70s/it, loss=0.655, acc=75] Training:  47%|████▋     | 9/19 [06:56<01:55, 11.58s/it, loss=0.655, acc=75]Training:  47%|████▋     | 9/19 [07:00<01:55, 11.58s/it, loss=1.03, acc=73.8]Training:  53%|█████▎    | 10/19 [07:00<01:24,  9.34s/it, loss=1.03, acc=73.8]Training:  53%|█████▎    | 10/19 [07:05<01:24,  9.34s/it, loss=0.587, acc=75] Training:  58%|█████▊    | 11/19 [07:05<01:03,  8.00s/it, loss=0.587, acc=75]Training:  58%|█████▊    | 11/19 [07:10<01:03,  8.00s/it, loss=0.77, acc=73.7]Training:  63%|██████▎   | 12/19 [07:10<00:50,  7.21s/it, loss=0.77, acc=73.7]Training:  63%|██████▎   | 12/19 [07:15<00:50,  7.21s/it, loss=0.951, acc=73.1]Training:  68%|██████▊   | 13/19 [07:15<00:38,  6.48s/it, loss=0.951, acc=73.1]Training:  68%|██████▊   | 13/19 [07:19<00:38,  6.48s/it, loss=0.64, acc=73]   Training:  74%|███████▎  | 14/19 [07:19<00:28,  5.78s/it, loss=0.64, acc=73]Training:  74%|███████▎  | 14/19 [07:24<00:28,  5.78s/it, loss=0.466, acc=73.3]Training:  79%|███████▉  | 15/19 [07:24<00:21,  5.32s/it, loss=0.466, acc=73.3]Training:  79%|███████▉  | 15/19 [07:27<00:21,  5.32s/it, loss=1.05, acc=72.3] Training:  84%|████████▍ | 16/19 [07:27<00:14,  4.84s/it, loss=1.05, acc=72.3]Training:  84%|████████▍ | 16/19 [07:32<00:14,  4.84s/it, loss=0.73, acc=72.1]Training:  89%|████████▉ | 17/19 [07:32<00:09,  4.75s/it, loss=0.73, acc=72.1]Training:  89%|████████▉ | 17/19 [07:36<00:09,  4.75s/it, loss=0.591, acc=72] Training:  95%|█████████▍| 18/19 [07:36<00:04,  4.59s/it, loss=0.591, acc=72]Training:  95%|█████████▍| 18/19 [07:37<00:04,  4.59s/it, loss=0.474, acc=72.2]Training: 100%|██████████| 19/19 [07:37<00:00,  3.41s/it, loss=0.474, acc=72.2]                                                                               Validating:   0%|          | 0/4 [00:00<?, ?it/s]Validating:  25%|██▌       | 1/4 [00:03<00:09,  3.32s/it]Validating:  50%|█████     | 2/4 [00:07<00:07,  3.70s/it]Validating:  75%|███████▌  | 3/4 [00:10<00:03,  3.31s/it]Validating: 100%|██████████| 4/4 [00:12<00:00,  3.14s/it]                                                         Train Loss: 0.6627, Train Acc: 72.21%
+Val Loss: 0.7653, Val Acc: 74.40%
+No improvement for 4 epochs
+
+Epoch 7/50
+Training:   0%|          | 0/19 [00:00<?, ?it/s]Training:   0%|          | 0/19 [00:04<?, ?it/s, loss=0.751, acc=65.6]Training:   5%|▌         | 1/19 [00:04<01:16,  4.24s/it, loss=0.751, acc=65.6]Training:   5%|▌         | 1/19 [00:09<01:16,  4.24s/it, loss=0.522, acc=71.9]Training:  11%|█         | 2/19 [00:09<01:21,  4.80s/it, loss=0.522, acc=71.9]Training:  11%|█         | 2/19 [00:14<01:21,  4.80s/it, loss=0.652, acc=68.8]Training:  16%|█▌        | 3/19 [00:14<01:17,  4.83s/it, loss=0.652, acc=68.8]Training:  16%|█▌        | 3/19 [00:17<01:17,  4.83s/it, loss=0.733, acc=68]  Training:  21%|██        | 4/19 [00:17<01:04,  4.31s/it, loss=0.733, acc=68]Training:  21%|██        | 4/19 [00:21<01:04,  4.31s/it, loss=0.591, acc=70.6]Training:  26%|██▋       | 5/19 [00:21<00:55,  3.98s/it, loss=0.591, acc=70.6]Training:  26%|██▋       | 5/19 [00:25<00:55,  3.98s/it, loss=0.705, acc=70.8]Training:  32%|███▏      | 6/19 [00:25<00:54,  4.20s/it, loss=0.705, acc=70.8]Training:  32%|███▏      | 6/19 [00:30<00:54,  4.20s/it, loss=0.591, acc=70.1]Training:  37%|███▋      | 7/19 [00:30<00:51,  4.31s/it, loss=0.591, acc=70.1]Training:  37%|███▋      | 7/19 [00:35<00:51,  4.31s/it, loss=0.811, acc=68.4]Training:  42%|████▏     | 8/19 [00:35<00:50,  4.55s/it, loss=0.811, acc=68.4]Training:  42%|████▏     | 8/19 [00:39<00:50,  4.55s/it, loss=0.959, acc=67.4]Training:  47%|████▋     | 9/19 [00:39<00:43,  4.36s/it, loss=0.959, acc=67.4]Training:  47%|████▋     | 9/19 [00:44<00:43,  4.36s/it, loss=0.566, acc=68.1]Training:  53%|█████▎    | 10/19 [00:44<00:40,  4.50s/it, loss=0.566, acc=68.1]Training:  53%|█████▎    | 10/19 [00:48<00:40,  4.50s/it, loss=0.494, acc=69.3]Training:  58%|█████▊    | 11/19 [00:48<00:36,  4.57s/it, loss=0.494, acc=69.3]Training:  58%|█████▊    | 11/19 [00:53<00:36,  4.57s/it, loss=0.727, acc=70.1]Training:  63%|██████▎   | 12/19 [00:53<00:32,  4.63s/it, loss=0.727, acc=70.1]Training:  63%|██████▎   | 12/19 [00:59<00:32,  4.63s/it, loss=0.754, acc=69.5]Training:  68%|██████▊   | 13/19 [00:59<00:29,  4.93s/it, loss=0.754, acc=69.5]Training:  68%|██████▊   | 13/19 [01:04<00:29,  4.93s/it, loss=0.694, acc=69.2]Training:  74%|███████▎  | 14/19 [01:04<00:25,  5.10s/it, loss=0.694, acc=69.2]Training:  74%|███████▎  | 14/19 [01:09<00:25,  5.10s/it, loss=0.477, acc=70.2]Training:  79%|███████▉  | 15/19 [01:09<00:19,  4.84s/it, loss=0.477, acc=70.2]Training:  79%|███████▉  | 15/19 [01:13<00:19,  4.84s/it, loss=0.52, acc=70.9] Training:  84%|████████▍ | 16/19 [01:13<00:14,  4.70s/it, loss=0.52, acc=70.9]Training:  84%|████████▍ | 16/19 [01:18<00:14,  4.70s/it, loss=0.598, acc=71.3]Training:  89%|████████▉ | 17/19 [01:18<00:09,  4.72s/it, loss=0.598, acc=71.3]Training:  89%|████████▉ | 17/19 [01:22<00:09,  4.72s/it, loss=0.456, acc=71.7]Training:  95%|█████████▍| 18/19 [01:22<00:04,  4.70s/it, loss=0.456, acc=71.7]Training:  95%|█████████▍| 18/19 [01:24<00:04,  4.70s/it, loss=0.358, acc=72]  Training: 100%|██████████| 19/19 [01:24<00:00,  3.65s/it, loss=0.358, acc=72]                                                                             Validating:   0%|          | 0/4 [00:00<?, ?it/s]Validating:  25%|██▌       | 1/4 [00:03<00:09,  3.27s/it]Validating:  50%|█████     | 2/4 [00:07<00:07,  3.70s/it]Validating:  75%|███████▌  | 3/4 [00:10<00:03,  3.31s/it]Validating: 100%|██████████| 4/4 [00:12<00:00,  3.12s/it]                                                         Train Loss: 0.6410, Train Acc: 72.04%
+Val Loss: 0.7291, Val Acc: 72.00%
+No improvement for 5 epochs
+
+Epoch 8/50
+Training:   0%|          | 0/19 [00:00<?, ?it/s]Training:   0%|          | 0/19 [00:05<?, ?it/s, loss=0.639, acc=75]Training:   5%|▌         | 1/19 [00:05<01:43,  5.74s/it, loss=0.639, acc=75]Training:   5%|▌         | 1/19 [00:10<01:43,  5.74s/it, loss=0.484, acc=79.7]Training:  11%|█         | 2/19 [00:10<01:24,  4.98s/it, loss=0.484, acc=79.7]Training:  11%|█         | 2/19 [00:14<01:24,  4.98s/it, loss=0.737, acc=77.1]Training:  16%|█▌        | 3/19 [00:14<01:17,  4.84s/it, loss=0.737, acc=77.1]Training:  16%|█▌        | 3/19 [00:18<01:17,  4.84s/it, loss=0.617, acc=76.6]Training:  21%|██        | 4/19 [00:18<01:07,  4.49s/it, loss=0.617, acc=76.6]Training:  21%|██        | 4/19 [00:22<01:07,  4.49s/it, loss=0.87, acc=73.1] Training:  26%|██▋       | 5/19 [00:22<00:58,  4.17s/it, loss=0.87, acc=73.1]Training:  26%|██▋       | 5/19 [00:27<00:58,  4.17s/it, loss=0.553, acc=75] Training:  32%|███▏      | 6/19 [00:27<00:56,  4.37s/it, loss=0.553, acc=75]Training:  32%|███▏      | 6/19 [00:32<00:56,  4.37s/it, loss=0.79, acc=74.6]Training:  37%|███▋      | 7/19 [00:32<00:56,  4.68s/it, loss=0.79, acc=74.6]Training:  37%|███▋      | 7/19 [00:36<00:56,  4.68s/it, loss=0.779, acc=73] Training:  42%|████▏     | 8/19 [00:36<00:50,  4.55s/it, loss=0.779, acc=73]Training:  42%|████▏     | 8/19 [00:41<00:50,  4.55s/it, loss=0.647, acc=72.9]Training:  47%|████▋     | 9/19 [00:41<00:45,  4.58s/it, loss=0.647, acc=72.9]Training:  47%|████▋     | 9/19 [00:45<00:45,  4.58s/it, loss=0.765, acc=71.9]Training:  53%|█████▎    | 10/19 [00:45<00:40,  4.47s/it, loss=0.765, acc=71.9]Training:  53%|█████▎    | 10/19 [00:49<00:40,  4.47s/it, loss=0.595, acc=72.2]Training:  58%|█████▊    | 11/19 [00:49<00:34,  4.31s/it, loss=0.595, acc=72.2]Training:  58%|█████▊    | 11/19 [00:55<00:34,  4.31s/it, loss=0.747, acc=72.1]Training:  63%|██████▎   | 12/19 [00:55<00:33,  4.83s/it, loss=0.747, acc=72.1]Training:  63%|██████▎   | 12/19 [00:59<00:33,  4.83s/it, loss=0.422, acc=72.6]Training:  68%|██████▊   | 13/19 [00:59<00:27,  4.61s/it, loss=0.422, acc=72.6]Training:  68%|██████▊   | 13/19 [01:04<00:27,  4.61s/it, loss=0.535, acc=73]  Training:  74%|███████▎  | 14/19 [01:04<00:23,  4.62s/it, loss=0.535, acc=73]Training:  74%|███████▎  | 14/19 [01:09<00:23,  4.62s/it, loss=0.757, acc=72.3]Training:  79%|███████▉  | 15/19 [01:09<00:18,  4.68s/it, loss=0.757, acc=72.3]Training:  79%|███████▉  | 15/19 [01:14<00:18,  4.68s/it, loss=0.506, acc=73.2]Training:  84%|████████▍ | 16/19 [01:14<00:14,  4.78s/it, loss=0.506, acc=73.2]Training:  84%|████████▍ | 16/19 [01:18<00:14,  4.78s/it, loss=0.567, acc=73.2]Training:  89%|████████▉ | 17/19 [01:18<00:09,  4.51s/it, loss=0.567, acc=73.2]Training:  89%|████████▉ | 17/19 [01:22<00:09,  4.51s/it, loss=0.712, acc=73.3]Training:  95%|█████████▍| 18/19 [01:22<00:04,  4.60s/it, loss=0.712, acc=73.3]Training:  95%|█████████▍| 18/19 [01:23<00:04,  4.60s/it, loss=0.528, acc=73.4]Training: 100%|██████████| 19/19 [01:23<00:00,  3.51s/it, loss=0.528, acc=73.4]                                                                               Validating:   0%|          | 0/4 [00:00<?, ?it/s]Validating:  25%|██▌       | 1/4 [00:03<00:09,  3.28s/it]Validating:  50%|█████     | 2/4 [00:07<00:07,  3.70s/it]Validating:  75%|███████▌  | 3/4 [00:10<00:03,  3.32s/it]Validating: 100%|██████████| 4/4 [00:12<00:00,  3.12s/it]                                                         Training:   0%|          | 0/19 [00:00<?, ?it/s]Epoch 00008: reducing learning rate of group 0 to 5.0000e-05.
+Train Loss: 0.6498, Train Acc: 73.41%
+Val Loss: 0.7877, Val Acc: 73.60%
+No improvement for 6 epochs
+
+Epoch 9/50
+Training:   0%|          | 0/19 [00:04<?, ?it/s, loss=0.643, acc=75]Training:   5%|▌         | 1/19 [00:04<01:21,  4.52s/it, loss=0.643, acc=75]Training:   5%|▌         | 1/19 [00:08<01:21,  4.52s/it, loss=0.467, acc=79.7]Training:  11%|█         | 2/19 [00:08<01:15,  4.42s/it, loss=0.467, acc=79.7]Training:  11%|█         | 2/19 [00:12<01:15,  4.42s/it, loss=0.687, acc=77.1]Training:  16%|█▌        | 3/19 [00:12<01:07,  4.20s/it, loss=0.687, acc=77.1]Training:  16%|█▌        | 3/19 [00:18<01:07,  4.20s/it, loss=0.538, acc=75]  Training:  21%|██        | 4/19 [00:18<01:10,  4.70s/it, loss=0.538, acc=75]Training:  21%|██        | 4/19 [00:21<01:10,  4.70s/it, loss=0.745, acc=75.6]Training:  26%|██▋       | 5/19 [00:21<00:59,  4.25s/it, loss=0.745, acc=75.6]Training:  26%|██▋       | 5/19 [00:25<00:59,  4.25s/it, loss=0.544, acc=74.5]Training:  32%|███▏      | 6/19 [00:25<00:55,  4.25s/it, loss=0.544, acc=74.5]Training:  32%|███▏      | 6/19 [00:29<00:55,  4.25s/it, loss=0.656, acc=73.7]Training:  37%|███▋      | 7/19 [00:29<00:48,  4.05s/it, loss=0.656, acc=73.7]Training:  37%|███▋      | 7/19 [00:33<00:48,  4.05s/it, loss=0.912, acc=71.9]Training:  42%|████▏     | 8/19 [00:33<00:43,  3.96s/it, loss=0.912, acc=71.9]Training:  42%|████▏     | 8/19 [00:37<00:43,  3.96s/it, loss=0.592, acc=72.6]Training:  47%|████▋     | 9/19 [00:37<00:40,  4.02s/it, loss=0.592, acc=72.6]Training:  47%|████▋     | 9/19 [00:42<00:40,  4.02s/it, loss=0.742, acc=72.8]Training:  53%|█████▎    | 10/19 [00:42<00:38,  4.30s/it, loss=0.742, acc=72.8]Training:  53%|█████▎    | 10/19 [00:47<00:38,  4.30s/it, loss=0.475, acc=73]  Training:  58%|█████▊    | 11/19 [00:47<00:37,  4.64s/it, loss=0.475, acc=73]Training:  58%|█████▊    | 11/19 [00:53<00:37,  4.64s/it, loss=0.569, acc=73.2]Training:  63%|██████▎   | 12/19 [00:53<00:35,  5.00s/it, loss=0.569, acc=73.2]Training:  63%|██████▎   | 12/19 [00:58<00:35,  5.00s/it, loss=0.698, acc=72.1]Training:  68%|██████▊   | 13/19 [00:58<00:29,  4.93s/it, loss=0.698, acc=72.1]Training:  68%|██████▊   | 13/19 [01:02<00:29,  4.93s/it, loss=0.532, acc=72.3]Training:  74%|███████▎  | 14/19 [01:02<00:22,  4.53s/it, loss=0.532, acc=72.3]Training:  74%|███████▎  | 14/19 [01:07<00:22,  4.53s/it, loss=0.761, acc=71.9]Training:  79%|███████▉  | 15/19 [01:07<00:19,  4.79s/it, loss=0.761, acc=71.9]Training:  79%|███████▉  | 15/19 [01:13<00:19,  4.79s/it, loss=0.832, acc=71.5]Training:  84%|████████▍ | 16/19 [01:13<00:15,  5.13s/it, loss=0.832, acc=71.5]Training:  84%|████████▍ | 16/19 [01:17<00:15,  5.13s/it, loss=0.678, acc=71.5]Training:  89%|████████▉ | 17/19 [01:17<00:09,  4.86s/it, loss=0.678, acc=71.5]Training:  89%|████████▉ | 17/19 [01:20<00:09,  4.86s/it, loss=0.517, acc=71.9]Training:  95%|█████████▍| 18/19 [01:20<00:04,  4.39s/it, loss=0.517, acc=71.9]Training:  95%|█████████▍| 18/19 [01:22<00:04,  4.39s/it, loss=0.601, acc=71.9]Training: 100%|██████████| 19/19 [01:22<00:00,  3.46s/it, loss=0.601, acc=71.9]                                                                               Validating:   0%|          | 0/4 [00:00<?, ?it/s]Validating:  25%|██▌       | 1/4 [00:03<00:09,  3.28s/it]Validating:  50%|█████     | 2/4 [00:07<00:07,  3.66s/it]Validating:  75%|███████▌  | 3/4 [00:10<00:03,  3.28s/it]Validating: 100%|██████████| 4/4 [00:12<00:00,  3.10s/it]                                                         Train Loss: 0.6433, Train Acc: 71.87%
+Val Loss: 0.7266, Val Acc: 72.80%
+No improvement for 7 epochs
+
+Epoch 10/50
+Training:   0%|          | 0/19 [00:00<?, ?it/s]Training:   0%|          | 0/19 [00:03<?, ?it/s, loss=0.836, acc=62.5]Training:   5%|▌         | 1/19 [00:03<01:09,  3.86s/it, loss=0.836, acc=62.5]Training:   5%|▌         | 1/19 [00:08<01:09,  3.86s/it, loss=0.493, acc=68.8]Training:  11%|█         | 2/19 [00:08<01:09,  4.10s/it, loss=0.493, acc=68.8]Training:  11%|█         | 2/19 [00:12<01:09,  4.10s/it, loss=0.651, acc=67.7]Training:  16%|█▌        | 3/19 [00:12<01:08,  4.27s/it, loss=0.651, acc=67.7]Training:  16%|█▌        | 3/19 [00:18<01:08,  4.27s/it, loss=0.678, acc=67.2]Training:  21%|██        | 4/19 [00:18<01:12,  4.85s/it, loss=0.678, acc=67.2]Training:  21%|██        | 4/19 [00:23<01:12,  4.85s/it, loss=0.722, acc=67.5]Training:  26%|██▋       | 5/19 [00:23<01:07,  4.83s/it, loss=0.722, acc=67.5]Training:  26%|██▋       | 5/19 [00:27<01:07,  4.83s/it, loss=0.494, acc=69.8]Training:  32%|███▏      | 6/19 [00:27<00:58,  4.53s/it, loss=0.494, acc=69.8]Training:  32%|███▏      | 6/19 [00:32<00:58,  4.53s/it, loss=0.662, acc=70.1]Training:  37%|███▋      | 7/19 [00:32<00:56,  4.69s/it, loss=0.662, acc=70.1]Training:  37%|███▋      | 7/19 [00:36<00:56,  4.69s/it, loss=0.571, acc=71.1]Training:  42%|████▏     | 8/19 [00:36<00:49,  4.48s/it, loss=0.571, acc=71.1]Training:  42%|████▏     | 8/19 [00:40<00:49,  4.48s/it, loss=0.635, acc=71.2]Training:  47%|████▋     | 9/19 [00:40<00:44,  4.41s/it, loss=0.635, acc=71.2]Training:  47%|████▋     | 9/19 [00:44<00:44,  4.41s/it, loss=0.476, acc=72.2]Training:  53%|█████▎    | 10/19 [00:44<00:40,  4.47s/it, loss=0.476, acc=72.2]Training:  53%|█████▎    | 10/19 [00:49<00:40,  4.47s/it, loss=0.654, acc=72.7]Training:  58%|█████▊    | 11/19 [00:49<00:35,  4.42s/it, loss=0.654, acc=72.7]Training:  58%|█████▊    | 11/19 [00:54<00:35,  4.42s/it, loss=0.498, acc=73.4]Training:  63%|██████▎   | 12/19 [00:54<00:32,  4.64s/it, loss=0.498, acc=73.4]Training:  63%|██████▎   | 12/19 [00:58<00:32,  4.64s/it, loss=0.557, acc=74]  Training:  68%|██████▊   | 13/19 [00:58<00:26,  4.35s/it, loss=0.557, acc=74]Training:  68%|██████▊   | 13/19 [01:01<00:26,  4.35s/it, loss=0.573, acc=74.1]Training:  74%|███████▎  | 14/19 [01:01<00:19,  3.99s/it, loss=0.573, acc=74.1]Training:  74%|███████▎  | 14/19 [01:06<00:19,  3.99s/it, loss=0.604, acc=74]  Training:  79%|███████▉  | 15/19 [01:06<00:17,  4.42s/it, loss=0.604, acc=74]Training:  79%|███████▉  | 15/19 [01:10<00:17,  4.42s/it, loss=0.67, acc=74.2]Training:  84%|████████▍ | 16/19 [01:10<00:12,  4.26s/it, loss=0.67, acc=74.2]Training:  84%|████████▍ | 16/19 [01:15<00:12,  4.26s/it, loss=0.594, acc=74.4]Training:  89%|████████▉ | 17/19 [01:15<00:08,  4.50s/it, loss=0.594, acc=74.4]Training:  89%|████████▉ | 17/19 [01:21<00:08,  4.50s/it, loss=0.8, acc=74]    Training:  95%|█████████▍| 18/19 [01:21<00:04,  4.84s/it, loss=0.8, acc=74]Training:  95%|█████████▍| 18/19 [01:22<00:04,  4.84s/it, loss=0.336, acc=74.3]Training: 100%|██████████| 19/19 [01:22<00:00,  3.68s/it, loss=0.336, acc=74.3]                                                                               Validating:   0%|          | 0/4 [00:00<?, ?it/s]Validating:  25%|██▌       | 1/4 [00:03<00:09,  3.26s/it]Validating:  50%|█████     | 2/4 [00:07<00:07,  3.69s/it]Validating:  75%|███████▌  | 3/4 [00:10<00:03,  3.30s/it]Validating: 100%|██████████| 4/4 [00:12<00:00,  3.11s/it]                                                         Train Loss: 0.6170, Train Acc: 74.27%
+Val Loss: 0.6858, Val Acc: 74.40%
+No improvement for 8 epochs
+
+Epoch 11/50
+Training:   0%|          | 0/19 [00:00<?, ?it/s]Training:   0%|          | 0/19 [00:04<?, ?it/s, loss=0.615, acc=71.9]Training:   5%|▌         | 1/19 [00:04<01:14,  4.13s/it, loss=0.615, acc=71.9]Training:   5%|▌         | 1/19 [00:08<01:14,  4.13s/it, loss=0.797, acc=70.3]Training:  11%|█         | 2/19 [00:08<01:14,  4.38s/it, loss=0.797, acc=70.3]Training:  11%|█         | 2/19 [00:14<01:14,  4.38s/it, loss=0.575, acc=74]  Training:  16%|█▌        | 3/19 [00:14<01:18,  4.93s/it, loss=0.575, acc=74]Training:  16%|█▌        | 3/19 [00:18<01:18,  4.93s/it, loss=0.415, acc=77.3]Training:  21%|██        | 4/19 [00:18<01:10,  4.67s/it, loss=0.415, acc=77.3]Training:  21%|██        | 4/19 [00:23<01:10,  4.67s/it, loss=0.498, acc=78.1]Training:  26%|██▋       | 5/19 [00:23<01:04,  4.63s/it, loss=0.498, acc=78.1]Training:  26%|██▋       | 5/19 [00:27<01:04,  4.63s/it, loss=0.658, acc=76.6]Training:  32%|███▏      | 6/19 [00:27<00:59,  4.61s/it, loss=0.658, acc=76.6]Training:  32%|███▏      | 6/19 [00:31<00:59,  4.61s/it, loss=0.655, acc=75]  Training:  37%|███▋      | 7/19 [00:31<00:53,  4.49s/it, loss=0.655, acc=75]Training:  37%|███▋      | 7/19 [00:36<00:53,  4.49s/it, loss=0.366, acc=75.8]Training:  42%|████▏     | 8/19 [00:36<00:49,  4.46s/it, loss=0.366, acc=75.8]Training:  42%|████▏     | 8/19 [00:41<00:49,  4.46s/it, loss=0.428, acc=77.1]Training:  47%|████▋     | 9/19 [00:41<00:48,  4.82s/it, loss=0.428, acc=77.1]Training:  47%|████▋     | 9/19 [00:47<00:48,  4.82s/it, loss=0.599, acc=76.9]Training:  53%|█████▎    | 10/19 [00:47<00:44,  4.91s/it, loss=0.599, acc=76.9]Training:  53%|█████▎    | 10/19 [00:50<00:44,  4.91s/it, loss=0.784, acc=75.9]Training:  58%|█████▊    | 11/19 [00:50<00:36,  4.52s/it, loss=0.784, acc=75.9]Training:  58%|█████▊    | 11/19 [00:55<00:36,  4.52s/it, loss=0.677, acc=75.5]Training:  63%|██████▎   | 12/19 [00:55<00:32,  4.58s/it, loss=0.677, acc=75.5]Training:  63%|██████▎   | 12/19 [00:58<00:32,  4.58s/it, loss=0.624, acc=75.2]Training:  68%|██████▊   | 13/19 [00:58<00:25,  4.23s/it, loss=0.624, acc=75.2]Training:  68%|██████▊   | 13/19 [01:03<00:25,  4.23s/it, loss=0.474, acc=75.4]Training:  74%|███████▎  | 14/19 [01:03<00:21,  4.33s/it, loss=0.474, acc=75.4]Training:  74%|███████▎  | 14/19 [01:07<00:21,  4.33s/it, loss=0.974, acc=74.2]Training:  79%|███████▉  | 15/19 [01:07<00:17,  4.39s/it, loss=0.974, acc=74.2]Training:  79%|███████▉  | 15/19 [01:11<00:17,  4.39s/it, loss=0.486, acc=74.6]Training:  84%|████████▍ | 16/19 [01:11<00:12,  4.27s/it, loss=0.486, acc=74.6]Training:  84%|████████▍ | 16/19 [01:17<00:12,  4.27s/it, loss=0.747, acc=74.1]Training:  89%|████████▉ | 17/19 [01:17<00:09,  4.60s/it, loss=0.747, acc=74.1]Training:  89%|████████▉ | 17/19 [01:20<00:09,  4.60s/it, loss=0.588, acc=74.3]Training:  95%|█████████▍| 18/19 [01:20<00:04,  4.30s/it, loss=0.588, acc=74.3]Training:  95%|█████████▍| 18/19 [01:22<00:04,  4.30s/it, loss=1.77, acc=73.8] Training: 100%|██████████| 19/19 [01:22<00:00,  3.45s/it, loss=1.77, acc=73.8]                                                                              Validating:   0%|          | 0/4 [00:00<?, ?it/s]Validating:  25%|██▌       | 1/4 [00:03<00:09,  3.29s/it]Validating:  50%|█████     | 2/4 [00:07<00:07,  3.66s/it]Validating:  75%|███████▌  | 3/4 [00:10<00:03,  3.27s/it]Validating: 100%|██████████| 4/4 [00:12<00:00,  3.10s/it]                                                         Train Loss: 0.6228, Train Acc: 73.76%
+Val Loss: 0.7088, Val Acc: 72.80%
+No improvement for 9 epochs
+
+Epoch 12/50
+Training:   0%|          | 0/19 [00:00<?, ?it/s]Training:   0%|          | 0/19 [00:03<?, ?it/s, loss=0.517, acc=84.4]Training:   5%|▌         | 1/19 [00:03<00:58,  3.26s/it, loss=0.517, acc=84.4]Training:   5%|▌         | 1/19 [00:07<00:58,  3.26s/it, loss=0.56, acc=79.7] Training:  11%|█         | 2/19 [00:07<01:04,  3.79s/it, loss=0.56, acc=79.7]Training:  11%|█         | 2/19 [00:11<01:04,  3.79s/it, loss=0.55, acc=79.2]Training:  16%|█▌        | 3/19 [00:11<01:01,  3.84s/it, loss=0.55, acc=79.2]Training:  16%|█▌        | 3/19 [00:15<01:01,  3.84s/it, loss=0.387, acc=79.7]Training:  21%|██        | 4/19 [00:15<01:00,  4.06s/it, loss=0.387, acc=79.7]Training:  21%|██        | 4/19 [00:21<01:00,  4.06s/it, loss=0.787, acc=77.5]Training:  26%|██▋       | 5/19 [00:21<01:05,  4.67s/it, loss=0.787, acc=77.5]Training:  26%|██▋       | 5/19 [00:24<01:05,  4.67s/it, loss=0.6, acc=76.6]  Training:  32%|███▏      | 6/19 [00:24<00:54,  4.19s/it, loss=0.6, acc=76.6]Training:  32%|███▏      | 6/19 [00:29<00:54,  4.19s/it, loss=0.564, acc=76.3]Training:  37%|███▋      | 7/19 [00:29<00:52,  4.34s/it, loss=0.564, acc=76.3]Training:  37%|███▋      | 7/19 [00:34<00:52,  4.34s/it, loss=0.763, acc=75]  Training:  42%|████▏     | 8/19 [00:34<00:49,  4.46s/it, loss=0.763, acc=75]Training:  42%|████▏     | 8/19 [00:38<00:49,  4.46s/it, loss=0.411, acc=76.4]Training:  47%|████▋     | 9/19 [00:38<00:43,  4.33s/it, loss=0.411, acc=76.4]Training:  47%|████▋     | 9/19 [00:40<00:43,  4.33s/it, loss=0.709, acc=75.3]Training:  53%|█████▎    | 10/19 [00:40<00:34,  3.86s/it, loss=0.709, acc=75.3]Training:  53%|█████▎    | 10/19 [00:46<00:34,  3.86s/it, loss=0.569, acc=75.6]Training:  58%|█████▊    | 11/19 [00:46<00:33,  4.24s/it, loss=0.569, acc=75.6]Training:  58%|█████▊    | 11/19 [00:51<00:33,  4.24s/it, loss=0.725, acc=74.7]Training:  63%|██████▎   | 12/19 [00:51<00:32,  4.70s/it, loss=0.725, acc=74.7]Training:  63%|██████▎   | 12/19 [00:56<00:32,  4.70s/it, loss=0.45, acc=75.5] Training:  68%|██████▊   | 13/19 [00:56<00:27,  4.61s/it, loss=0.45, acc=75.5]Training:  68%|██████▊   | 13/19 [01:00<00:27,  4.61s/it, loss=0.538, acc=75.4]Training:  74%|███████▎  | 14/19 [01:00<00:22,  4.58s/it, loss=0.538, acc=75.4]Training:  74%|███████▎  | 14/19 [01:05<00:22,  4.58s/it, loss=0.658, acc=75.2]Training:  79%|███████▉  | 15/19 [01:05<00:18,  4.52s/it, loss=0.658, acc=75.2]Training:  79%|███████▉  | 15/19 [01:10<00:18,  4.52s/it, loss=0.743, acc=75.2]Training:  84%|████████▍ | 16/19 [01:10<00:13,  4.67s/it, loss=0.743, acc=75.2]Training:  84%|████████▍ | 16/19 [01:15<00:13,  4.67s/it, loss=0.702, acc=75.4]Training:  89%|████████▉ | 17/19 [01:15<00:09,  4.90s/it, loss=0.702, acc=75.4]Training:  89%|████████▉ | 17/19 [01:20<00:09,  4.90s/it, loss=0.707, acc=75.2]Training:  95%|█████████▍| 18/19 [01:20<00:04,  4.98s/it, loss=0.707, acc=75.2]Training:  95%|█████████▍| 18/19 [01:22<00:04,  4.98s/it, loss=0.967, acc=74.8]Training: 100%|██████████| 19/19 [01:22<00:00,  3.92s/it, loss=0.967, acc=74.8]                                                                               Validating:   0%|          | 0/4 [00:00<?, ?it/s]Validating:  25%|██▌       | 1/4 [00:03<00:09,  3.24s/it]Validating:  50%|█████     | 2/4 [00:07<00:07,  3.65s/it]Validating:  75%|███████▌  | 3/4 [00:09<00:03,  3.27s/it]Validating: 100%|██████████| 4/4 [00:12<00:00,  3.08s/it]                                                         Train Loss: 0.6121, Train Acc: 74.79%
+Val Loss: 0.6965, Val Acc: 73.60%
+No improvement for 10 epochs
+
+Early stopping triggered after 12 epochs
+
+Training history saved to /app/output/training_history.csv
+Training config saved to /app/output/training_config.json
+
+Training completed!
+Best validation accuracy: 75.20%
+Model saved to /app/output/models/best_model.pth
+
+Step 3: Running evaluation...
+
+============================================================
+EVALUATION
+============================================================
+
+[Device Information]
+  Using: CPU
+
+Loading model...
+Model loaded from /app/output/models/best_model.pth
+  Checkpoint epoch: 2
+  Checkpoint val_acc: 75.20%
+
+Test set size: 125
+
+Running inference on test set...
+Running inference:   0%|          | 0/4 [00:00<?, ?it/s]Running inference:  25%|██▌       | 1/4 [00:03<00:09,  3.03s/it]Running inference:  50%|█████     | 2/4 [00:08<00:08,  4.18s/it]Running inference:  75%|███████▌  | 3/4 [00:11<00:03,  3.84s/it]Running inference: 100%|██████████| 4/4 [00:14<00:00,  3.43s/it]Running inference: 100%|██████████| 4/4 [00:14<00:00,  3.56s/it]
+
+Computing metrics...
+
+============================================================
+EVALUATION RESULTS
+============================================================
+
+Overall Accuracy: 62.40%
+
+Macro-averaged Metrics:
+  Precision: 46.43%
+  Recall: 40.23%
+  F1-Score: 41.34%
+
+Per-class Metrics:
+
+  Pronacio:
+    Precision: 28.57%
+    Recall: 20.69%
+    F1-Score: 24.00%
+
+  Neutralis:
+    Precision: 70.71%
+    Recall: 83.33%
+    F1-Score: 76.50%
+
+  Szupinacio:
+    Precision: 40.00%
+    Recall: 16.67%
+    F1-Score: 23.53%
+
+============================================================
+Classification Report:
+              precision    recall  f1-score   support
+
+    Pronacio       0.29      0.21      0.24        29
+   Neutralis       0.71      0.83      0.77        84
+  Szupinacio       0.40      0.17      0.24        12
+
+    accuracy                           0.62       125
+   macro avg       0.46      0.40      0.41       125
+weighted avg       0.58      0.62      0.59       125
+
+Confusion matrix saved to /app/output/confusion_matrix.png
+Normalized confusion matrix saved to /app/output/confusion_matrix_normalized.png
+
+Evaluation report saved to /app/output/evaluation_report.json
+Test predictions saved to /app/output/test_predictions.csv
+
+============================================================
+Evaluation completed successfully!
+============================================================
+
+Step 4: Running inference...
+
+============================================================
+INFERENCE
+============================================================
+
+[Device Information]
+  Using: CPU
+
+Loading model...
+Model loaded from /app/output/models/best_model.pth
+  Checkpoint epoch: 2
+  Checkpoint val_acc: 75.20%
+
+No inference images found in /data/inference
+To run inference on new images:
+  1. Create a directory: /data/inference
+  2. Place your images in that directory
+  3. Run this script again
+
+Running demo inference on sample test images...
+
+[Demo Inference Results]
+------------------------------------------------------------
+
+Image: sajat_reszvevo01_02.jpg
+  Predicted: Pronacio
+  Confidence: 61.4%
+  All probabilities:
+    Pronacio: 61.4%
+    Neutralis: 33.3%
+    Szupinacio: 5.3%
+
+Image: sajat_reszvevo02_03.jpg
+  Predicted: Neutralis
+  Confidence: 90.1%
+  All probabilities:
+    Pronacio: 4.3%
+    Neutralis: 90.1%
+    Szupinacio: 5.6%
+
+Image: sajat_reszvevo07_01.jpg
+  Predicted: Neutralis
+  Confidence: 63.4%
+  All probabilities:
+    Pronacio: 24.3%
+    Neutralis: 63.4%
+    Szupinacio: 12.3%
+
+Image: sajat_reszvevo07_01.jpg
+  Predicted: Neutralis
+  Confidence: 63.4%
+  All probabilities:
+    Pronacio: 24.3%
+    Neutralis: 63.4%
+    Szupinacio: 12.3%
+
+Image: sajat_reszvevo03_01.JPG
+  Predicted: Neutralis
+  Confidence: 77.4%
+  All probabilities:
+    Pronacio: 14.0%
+    Neutralis: 77.4%
+    Szupinacio: 8.7%
+
+==========================================
+Pipeline finished successfully.
+==========================================
