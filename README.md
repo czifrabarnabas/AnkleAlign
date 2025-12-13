@@ -27,7 +27,7 @@ This project implements a deep learning solution for automatic ankle alignment c
 - Early stopping with patience of 10 epochs
 - Stratified train/validation/test split (70/15/15)
 
-**Results**: The model achieves approximately 63-77% validation accuracy depending on the run, with best performance on the Neutral class due to class imbalance in the dataset.
+**Results**: The model achieves approximately 70% validation accuracy and 73% test accuracy, with best performance on the Neutral class due to class imbalance in the dataset (965 total samples: 559 Neutral, 193 Pronation, 81 Supination).
 
 ### Data Preparation
 
