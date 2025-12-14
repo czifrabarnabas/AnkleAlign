@@ -31,7 +31,9 @@ This project implements a deep learning solution for automatic ankle alignment c
 
 ### Data Preparation
 
-The data is provided in Label Studio JSON consensus format. The raw data is located on a shared drive and should be mounted at `/data` when running the container.
+The data is provided in Label Studio JSON consensus format. The raw data is located on a shared drive and should be mounted at `/data` when running the container. 
+
+During development, I downloaded the folder shared in the Teams channel (anklealign.zip), and used that as data folder.
 
 **Data structure expected:**
 ```
