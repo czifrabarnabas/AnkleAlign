@@ -75,6 +75,7 @@ To run the solution, use the following command. You must mount your local data d
 
 **To capture the logs for submission (required), redirect the output to a file:**
 
+**Linux with NVIDIA GPU:**
 ```bash
 docker run --rm --gpus all \
     -v /absolute/path/to/your/local/data:/data \
@@ -82,17 +83,27 @@ docker run --rm --gpus all \
     anklealign:1.0 > log/run.log 2>&1
 ```
 
-**Example (Linux/macOS):**
+**macOS (Apple Silicon / Intel) - CPU only:**
 ```bash
-docker run --rm --gpus all \
+docker run --rm \
     -v $(pwd)/data:/data \
     -v $(pwd)/output:/app/output \
     anklealign:1.0 > log/run.log 2>&1
 ```
 
-**Example (Windows PowerShell):**
+> **Note for macOS users**: Docker Desktop for Mac does not support GPU passthrough. The container will run on CPU, which is slower but fully functional. On Apple Silicon (M1/M2/M3), Docker will emulate the x86_64 architecture automatically.
+
+**Windows PowerShell (with NVIDIA GPU):**
 ```powershell
 docker run --rm --gpus all `
+    -v ${PWD}/data:/data `
+    -v ${PWD}/output:/app/output `
+    anklealign:1.0 > log/run.log 2>&1
+```
+
+**Windows PowerShell (CPU only):**
+```powershell
+docker run --rm `
     -v ${PWD}/data:/data `
     -v ${PWD}/output:/app/output `
     anklealign:1.0 > log/run.log 2>&1
@@ -104,9 +115,20 @@ docker run --rm --gpus all `
 
 ### Interactive Development with Jupyter Lab
 
-**Linux/macOS:**
+**Linux with NVIDIA GPU:**
 ```bash
 docker run --rm -it --gpus all \
+    -v $(pwd)/src:/app \
+    -v $(pwd)/notebook:/app/notebook \
+    -v $(pwd)/data:/data \
+    -v $(pwd)/output:/app/output \
+    -p 8888:8888 \
+    anklealign:1.0 bash
+```
+
+**macOS (CPU only):**
+```bash
+docker run --rm -it \
     -v $(pwd)/src:/app \
     -v $(pwd)/notebook:/app/notebook \
     -v $(pwd)/data:/data \
@@ -198,9 +220,11 @@ After running the pipeline, the following files are generated in the output dire
 
 ## Requirements
 
-- Docker
-- NVIDIA GPU with CUDA support (for GPU training)
-- NVIDIA Container Toolkit (for GPU access in Docker)
+- Docker Desktop
+- NVIDIA GPU with CUDA support (optional, for faster GPU training on Linux/Windows)
+- NVIDIA Container Toolkit (required only for GPU access in Docker on Linux)
+
+> **Note**: The pipeline runs on CPU by default and does not require a GPU. GPU acceleration is optional and only available on Linux systems with NVIDIA GPUs.
 
 ## License
 
